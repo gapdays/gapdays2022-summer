@@ -1,3 +1,5 @@
+# GAP days
+
 This is the website for the [GAP days](https://www.gapdays.de/gapdays2022-summer).
 
 It is based on [Jekyll](https://jekyllrb.com/), a static website generator,
@@ -13,7 +15,7 @@ described on its website), then do this:
 Now open a browser on http://localhost:4000/ to see a live preview
 of the site.
 
-== Steps for new GAP Days
+## Steps for new GAP Days
 
 To create a website for a new GAP Days event, follow roughly the following
 steps:
