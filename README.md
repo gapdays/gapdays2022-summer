@@ -1,4 +1,4 @@
-# GAP days
+# GAP Days
 
 This is the website for the [GAP days](https://www.gapdays.de/gapdays2022-summer).
 
@@ -15,7 +15,7 @@ Now open a browser on http://localhost:4000/ to see a live preview of the site.
 
 ## Steps for new GAP Days
 
-To create a website for a new GAP Days event, follow roughly the following steps:
+To create a website for a new **GAP Days** event, follow roughly the following steps:
 
 1. Copy the data of the previous GAP Days into a new repository.
    Add that repository under a suitable name at https://github.com/gapdays
@@ -25,19 +25,13 @@ To create a website for a new GAP Days event, follow roughly the following steps
     - `index.md`
     - `location.md`
     - `registration.html`
-      - The "registration_open" entry at the top can be used to
-        enable / disable registration
-      - Update the "form_api_token" value at the
-        top of the file. See https://getsimpleform.com for more
-        information. (Note that notification emails for new
-        registrations are sent to a single email address. So I
-        recommend setting up an address that can deliver to multiple people.)
+      - The "registration_open" entry at the top can be used to enable / disable registration
+      - Update the "form_api_token" value at the top of the file. See https://getsimpleform.com for more information. (Note that notification emails for new registrations are sent to a single email address. So I recommend setting up an address that can deliver to multiple people.)
       - Also update the "email" field at the top
-      - Edit the available arrival/departure date options in the form
+      - Edit the available arrival / departure date options in the form
       - Edit the rest of the page suitably
     - `participants.md`
-      - This contains the list of participants, in [YAML](https://en.wikipedia.org/wiki/YAML)
-        format. Basic entries look like this:
+      - This contains the list of participants, in [YAML](https://en.wikipedia.org/wiki/YAML) format. Basic entries look like this:
 
             - name: John Doe
               affiliation: University of Nowhere
@@ -49,6 +43,5 @@ To create a website for a new GAP Days event, follow roughly the following steps
               links:
                 "slides": http://bit.ly/gap-worksheets2015
                 "photo": ../photo/john_doe.jpg
-
 
 3. Optionally, edit `program.tex`, run **pdflatex** on it, and add the resulting PDF. Or, if you don't want to use it, just remove both the `.tex` and `.pdf`.
