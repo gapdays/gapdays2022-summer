@@ -8,9 +8,9 @@ and the [hyde](https://github.com/poole/hyde/) template.
 If you want to test site on your own machine, first install Jekyll (as
 described on its website), then do this:
 ```
-  git clone https://github.com/gapdays/gapdays2022-summer
-  cd gapdays2022-summer
-  jekyll serve -w
+git clone https://github.com/gapdays/gapdays2022-summer
+cd gapdays2022-summer
+jekyll serve -w
 ```
 Now open a browser on http://localhost:4000/ to see a live preview
 of the site.
@@ -24,10 +24,10 @@ steps:
    Add that repository under a suitable name at https://github.com/gapdays
 
 2. Edit all relevant files; at the very least do the following:
-    - _config.yml: update baseurl to match the name of the repository at github.
-    - index.md
-    - location.md
-    - registration.html
+    - `_config.yml`: update baseurl to match the name of the repository at github.
+    - `index.md`
+    - `location.md`
+    - `registration.html`
       - the "registration_open" entry at the top can be used to
         enable / disable registration
       - Update the "form_api_token" value at the
@@ -38,7 +38,7 @@ steps:
       - Also update the "email" field at the top
       - edit the available arrival/departure date options in the form
       - edit the rest of the page suitably
-    - participants.md
+    - `participants.md`
       - This contains the list of participants, in [YAML](https://en.wikipedia.org/wiki/YAML)
         format. Basic entries look like this:
 
@@ -54,5 +54,5 @@ steps:
                 "photo": ../photo/john_doe.jpg
 
 
-3. Optionally, edit program.tex, run pdflatex on it, and add the resulting
-  PDF. Or, if you don't want to use it, just remove both the .tex and .pdf
+3. Optionally, edit `program.tex`, run **pdflatex** on it, and add the resulting
+  PDF. Or, if you don't want to use it, just remove both the `.tex` and `.pdf`
