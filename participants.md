@@ -110,6 +110,11 @@ participants:
   - name: Wilf Wilson
     links:
       "GitHub: wilfwilson": https://github.com/wilfwilson
+      
+  - name: Eileen X. Pan
+    affiliation: Warwick--Monash Alliance
+    links:
+      "GitHub: wucas": https://github.com/wucas“
 ---
 
 <ol>{% assign participants = page.participants | sort: "name" %}
