@@ -114,7 +114,7 @@ participants:
   - name: Eileen X. Pan
     affiliation: Warwick--Monash Alliance
     links:
-      "GitHub: wucas": https://github.com/xpan-eileen
+      "GitHub: xpan-eileen": https://github.com/xpan-eileen
 ---
 
 <ol>{% assign participants = page.participants | sort: "name" %}
