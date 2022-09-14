@@ -115,6 +115,11 @@ participants:
     affiliation: Warwick--Monash Alliance
     links:
       "GitHub: xpan-eileen": https://github.com/xpan-eileen
+
+  - name: Thomas Breuer
+    affiliation: RWTH Aachen
+    links:
+      "GitHub: ThomasBreuer": https://github.com/ThomasBreuer
 ---
 
 <ol>{% assign participants = page.participants | sort: "name" %}
