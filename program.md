@@ -8,37 +8,68 @@ title: Program
 
 ## Detailed schedule
 
-We will open with a meeting at 10am on Monday to coordinate plans for the week,
-and follow a pattern of "Standups" each day at around 9am and 4:30pm, to
+We will open with a meeting at 10:00 on Monday to coordinate plans for the week,
+and follow a pattern of "Standups" each day at around 9:00 and 16:30, to
 communicate what we plan to work on, and what we have worked on, respectively.
-We will close the meeting at around 3pm on Friday.
+We will close the meeting at around 15:00 on Friday.
 
 This schedule is preliminary. Additional events will be added soon.
 
 - **Monday** 
   - 10:00: **Opening of the GAP Days**
-  - 12:00 (ish): Lunch 
+  - 10:20 - 10:50: Talk by TBA:
+    *Introduction to MatrixObj*
+  - 11:00 - 11:30: Talk by Leonard Soicher:
+    *Clique and design finding in parallel using GAP, GRAPE, DESIGN and C*
+  - 12:00: Lunch break
+  - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
 
 - **Tuesday** 
-  - 09:15: Stand-up meeting
-  - 09:45: Package Session (Volunteers welcome! See [here]({{ site.baseurl }}/registration).)
-  - 12:00 (ish): Lunch 
+  - 09:00 - 9:15: Stand-up meeting
+  - 09:20: Package Session Part 1
+    - 9:20 - 9:35: Vole by Christopher Jefferson
+    - 9:45 - 10:00: StandardFF by Frank Lübeck
+    - 10:10 - 10:25: LINS by Friedrich Rober
+    - 10:35 - 10:50: SOTGrps by Eileen Pan
+  - 11:00 - 12:00: Work session
+  - 12:00: Lunch break
+  - 13:20: Group photo (please be there)
+  - 13:30: Package Session Part 2
+    - 13:30 - 13:45: Simplicial Surfaces by Tom Görtzen and Reymond Akpanya
+    - 13:55 - 14:10: WPE by Friedrich Rober
+    - 14:20 - 14:35: BruhatDecomposition by Daniel Rademacher
+    - 10:35 - 10:50: ASR by Anna Sucker and Lucas Wollenhaupt
+  - 15:00 - 16:30: Work session
   - 16:30: Stand-up meeting
 
 - **Wednesday** 
-  - 09:15: Stand-up meeting
-  - 12:00 (ish): Lunch 
+  - 09:00 - 9:15: Stand-up meeting
+  - 9:20 - 9:50: Talk by Mun See Chang
+  - 10:00 - 10:30: Talk by Ruth Hoffmann:
+    *GAP for Permutation Pattern Classes*
+  - 10:40 - 12:00: Work session
+  - 12:00: Lunch 
+  - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
 
 - **Thursday** 
-  - 09:15: Stand-up meeting
-  - 12:00 (ish): Lunch 
+  - 09:00 - 9:15: Stand-up meeting
+  - 9:20 - 9:50: Talk by Fatemeh Koorepazan-Moftakhar
+    *An algorithm for constructing all supercharacter theories of a finite group*
+  - 10:00 - 10:30: Talk by Kuroš Mavaddat Nežâd:
+    *Classification of Gyrogroups of Small Order*
+  - 10:40 - 12:00: Work session
+  - 12:00: Lunch 
+  - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
 
 - **Friday** 
-  - 09:15: Stand-up meeting
-  - 12:00 (ish): Lunch 
+  - 09:00 - 9:15: Stand-up meeting
+  - 9:15 - 11:40: Work session
+  - 11:40 - 12:00: Time for Feedback
+  - 12:00: Lunch 
+  - 13:00 - 15:00: Work session
   - 15:00: **Closing of the GAP Days**
 
 
