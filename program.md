@@ -20,7 +20,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 10:20 - 10:50: Talk by TBA:
     *Introduction to MatrixObj*
   - 11:00 - 11:30: Talk by Leonard Soicher:
-    *Clique and design finding in parallel using GAP, GRAPE, DESIGN and C*
+    *[Clique and design finding in parallel using GAP, GRAPE, DESIGN and C]({{ site.baseurl }}/abstracts/soicher)*
   - 12:00: Lunch break
   - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
@@ -47,7 +47,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 09:00 - 9:15: Stand-up meeting
   - 9:20 - 9:50: Talk by Mun See Chang
   - 10:00 - 10:30: Talk by Ruth Hoffmann:
-    *GAP for Permutation Pattern Classes*
+    *[GAP for Permutation Pattern Classes]({{ site.baseurl }}/abstracts/hoffmann)*
   - 10:40 - 12:00: Work session
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
