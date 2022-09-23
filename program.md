@@ -45,7 +45,8 @@ This schedule is preliminary. Additional events will be added soon.
 
 - **Wednesday** 
   - 09:00 - 9:15: Stand-up meeting
-  - 9:20 - 9:50: Talk by Mun See Chang
+  - 9:20 - 9:50: Talk by Mun See Chang:
+    *[Computing Normalisers]({{ site.baseurl }}/abstracts/chang)*
   - 10:00 - 10:30: Talk by Ruth Hoffmann:
     *[GAP for Permutation Pattern Classes]({{ site.baseurl }}/abstracts/hoffmann)*
   - 10:40 - 12:00: Work session
