@@ -120,6 +120,12 @@ participants:
     affiliation: RWTH Aachen
     links:
       "GitHub: ThomasBreuer": https://github.com/ThomasBreuer
+
+  - name: Iryna Raievska
+    affiliation: University of Warsaw
+
+  - name: Maryna Raievska
+    affiliation: University of Warsaw
 ---
 
 <ol>{% assign participants = page.participants | sort: "name" %}
