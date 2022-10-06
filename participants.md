@@ -22,9 +22,6 @@ participants:
     links:
       "GitHub: Munsee": https://github.com/Munsee
 
-  - name: Deepshikha Chatterjee
-    affiliation: Ambedkar University Delhi
-
   - name: Leila Ghanbari Maman
     affiliation: University of Tehran
 
@@ -59,9 +56,6 @@ participants:
 
   - name: Dominika Mihálová
     affiliation: Comenius University in Bratislava
-
-  - name: Kuroš Mavaddat Nežâd
-    affiliation: University of Kashan
 
   - name: Alice Niemeyer
     affiliation: RWTH Aachen
