@@ -120,6 +120,9 @@ participants:
 
   - name: Maryna Raievska
     affiliation: University of Warsaw
+    
+  - name: Deepshikha Chatterjee
+    affiliation: Ambedkar University Delhi
 ---
 
 <ol>{% assign participants = page.participants | sort: "name" %}
