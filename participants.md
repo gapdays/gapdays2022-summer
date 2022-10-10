@@ -117,9 +117,13 @@ participants:
 
   - name: Iryna Raievska
     affiliation: University of Warsaw
+    links:
+      "GitHub: raemarina": https://github.com/raemarina
 
   - name: Maryna Raievska
     affiliation: University of Warsaw
+    links:
+      "GitHub: IrynaRaievska": https://github.com/IrynaRaievska
     
   - name: Deepshikha Chatterjee
     affiliation: Ambedkar University Delhi
