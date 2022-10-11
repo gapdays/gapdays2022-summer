@@ -25,8 +25,12 @@ You can find the organizers in room 318 on floor 3.
 
 <h2>Rooms</h2>
 
-TBA
+The talks and the main part of work sessions will take place in room *SeMath* on
+the ground floor. In case someone needs a more quiet work space or a subset of
+us want to discuss something not everyone is interested in we have a secondary
+room in the same building.
 
+The room *SeMath* has two blackboards and two beamers each with HDMI and VGA connections.
 
 <h2>Accommodation</h2>
 
