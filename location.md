@@ -60,10 +60,11 @@ Aachen's Pontviertel offers various places to have lunch and dinner. Here are a 
     - Distance from location: 2 min walking distance
     - [Offers](https://mamaundpapatai.de/speisekarte-2/) vietnamese food and sushi
     - Price: 10,00 € - 20,00 €
-- [Labyrinth](https://www.openstreetmap.org/search?whereami=1&query=50.78072%2C6.07962#map=19/50.78072/6.07962)
+<!-- - [Labyrinth](https://www.openstreetmap.org/search?whereami=1&query=50.78072%2C6.07962#map=19/50.78072/6.07962)
     - Distance from location: 2 min walking distance
     - Offers a wide range of different foods, including vegetarian options
     - Price: 10,00 € - 20,00 €
+-->
 - [Sultan's of Kebab](https://www.openstreetmap.org/node/5240616476#map=19/50.78010/6.08043)
     - Distance from location: 1 min walking distance
     - Offers Kebab and Falafel
