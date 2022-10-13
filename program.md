@@ -25,7 +25,8 @@ This schedule is preliminary. Additional events will be added soon.
     *Introduction to MatrixObj*
   - 14:30 - 16:30: Work session
   - 16:30: Stand-up meeting
-  <!--- 10:00: **Opening of the GAP Days**
+  
+  <!-- 10:00: **Opening of the GAP Days**
   - 10:20 - 10:50: Talk by TBA:
     *Introduction to MatrixObj*
   - 11:00 - 11:30: Talk by Leonard Soicher:
@@ -33,6 +34,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 12:00: Lunch break
   - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting -->
+
 - **Tuesday** 
   - 09:00 - 9:15: Stand-up meeting
   - 09:20: Package Session Part 1
