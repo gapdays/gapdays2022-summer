@@ -25,7 +25,7 @@ This schedule is preliminary. Additional events will be added soon.
     *Introduction to MatrixObj*
   - 14:30 - 16:30: Work session
   - 16:30: Stand-up meeting
-  - 20:00: Get together at *[Guinness House]{https://goo.gl/maps/yvbnJrCKLyZNw1k37}*
+  - 20:00: Get together at [Guinness House](https://goo.gl/maps/yvbnJrCKLyZNw1k37)
   
   <!-- 10:00: **Opening of the GAP Days**
   - 10:20 - 10:50: Talk by TBA:
@@ -64,7 +64,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
-  - 19:00: Dinner at *[Magellan]{https://goo.gl/maps/tBAXAGMgrhspUEf8A}*
+  - 19:00: Dinner at [Magellan](https://goo.gl/maps/tBAXAGMgrhspUEf8A)
 
 - **Thursday** 
   - 09:00 - 9:15: Stand-up meeting
