@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /abstracts/raievski
+permalink: /abstracts/raievska
 ---
 
 ## Iryna Raievska and Maryna Raievska
