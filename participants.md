@@ -22,8 +22,8 @@ participants:
     links:
       "GitHub: Munsee": https://github.com/Munsee
 
-  - name: Leila Ghanbari Maman
-    affiliation: University of Tehran
+  # - name: Leila Ghanbari Maman
+  #  affiliation: University of Tehran
 
   - name: Tom Görtzen
     affiliation: RWTH Aachen
@@ -40,8 +40,8 @@ participants:
     links:
       "GitHub: fingolfin": https://github.com/fingolfin
 
-  - name: Ali Iranmanesh
-    affiliation: Tarbiat Modares University
+  # - name: Ali Iranmanesh
+  #  affiliation: Tarbiat Modares University
 
   - name: Christopher Jefferson
     affiliation: University of St Andrews
@@ -100,10 +100,10 @@ participants:
     affiliation: RWTH Aachen
     links:
       "GitHub: wucas": https://github.com/wucas
-
-  - name: Wilf Wilson
-    links:
-      "GitHub: wilfwilson": https://github.com/wilfwilson
+   
+  # - name: Wilf Wilson
+  #  links:
+  #    "GitHub: wilfwilson": https://github.com/wilfwilson
       
   - name: Eileen X. Pan
     affiliation: Warwick--Monash Alliance
