@@ -42,7 +42,7 @@ This schedule is preliminary. Additional events will be added soon.
     - 9:20 - 9:35: [vole](https://github.com/peal/vole) by Christopher Jefferson
     - 9:45 - 10:00: [StandardFF](https://github.com/frankluebeck/StandardFF) by Frank Lübeck
     - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober
-    - 10:35 - 10:50: [SOTGrps](https://github.com/xpan-eileen/sotgrps_gap_pkg) by Eileen Pan
+    - 10:35 - 10:50: [SOTGrps](https://github.com/xpan-eileen/sotgrps) by Eileen Pan
   - 11:00 - 12:00: Work session
   - 12:00: Lunch break
   - 13:20: Group photo (please be there)
