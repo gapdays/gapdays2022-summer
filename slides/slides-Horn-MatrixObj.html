@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The MatrixObj project</title>
+
+    <meta name="description" content="Better linear algebra for GAP">
+    <meta name="author" content="Max Horn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/railscasts.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+<section>
+    <h2>The MatrixObj project</h2>
+    <p><small>Max Horn</small></p>
+</section>
+
+<section>
+    <h3>Matrices in GAP have some issues...</h3>
+    <p>They usually...</p>
+    <ol>
+    <li> ... are assumed to be "lists of row vectors";
+    <li> ... don't "know" their base ring;
+    <li> ... don't "know" their dimensions;
+    <li> ... can incur massive method dispatch overhead.
+    </ol>
+    <p>Let's look at these a bit closer!</p>
+</section>
+
+
+<section>
+    <h3>The GAP manual on matrices</h3>
+    <ul>
+    <li class="fragment"> <q>"Matrices  are  represented  in  GAP  by  lists of row vectors [...]"</q>
+    <pre><code data-trim>
+    gap> mat:=[[1,2,3],[4,5,6],[7,8,9]];;
+    gap> IsMatrix(mat);
+    true
+    </code></pre>
+    <li class="fragment"> <q>"The vectors must all have the same length, and their elements must lie in a common  ring."</q>
+    <li class="fragment"> For performance reasons, this is not enforced.
+    <pre><code data-trim>
+    gap> mat:=[[1,2],[3]];;
+    gap> IsMatrix(mat);
+    true
+    gap> IsRectangularTable(mat);
+    false
+    gap> DimensionsMat(mat);
+    fail
+    </code></pre>
+    </ul>
+</section>
+
+<section>
+    <h3>GAP matrices have no base ring</h3>
+    <ul>
+    <li class="fragment">What's the base ring of this matrix?
+    <pre><code data-trim>
+    gap> mat:=[[0,1],[2,3]];;
+    </code></pre>
+    <li class="fragment">Affects questions like "Is this matrix invertible?" ("yes" over $\mathbb{Q}$, "no" over $\mathbb{Z}$)
+    <pre><code data-trim>
+    gap> mat^-1;
+    [ [ -3/2, 1/2 ], [ 1, 0 ] ]
+    </code></pre>
+    <li class="fragment">Some operations, like <code>Eigenvalues</code>, at least allow you to specify a base field or ring.
+    </ul>
+</section>
+
+<section>
+    <h3>... no base ring [cont.]</h3>
+    <ul>
+    <li class="fragment">Perhaps we can ask GAP? Hmmm, it kinda assumes matrices are over fields:
+    <pre><code data-trim>
+    gap> DefaultFieldOfMatrix(mat);
+    Rationals
+    </code></pre>
+    <li class="fragment">Alternatively, let
+    <pre><code data-trim>
+    gap> R:=DefaultRing(mat); LeftActingDomain(R);
+    ( Integers^[ 2, 2 ] )
+    Integers
+    </code></pre>
+    <li class="fragment">Base "field" is to restrictive; perhaps "ring" also?
+    <li class="fragment">To compute "the" (or rather "a") base ring, GAP may need to inspect all matrix entries
+    </ul>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### Empty matrices
+* <!-- .element: class="fragment" --> How to represent $0\times n$ or $m\times0$ matrices?
+* <!-- .element: class="fragment" --> Sometimes `[]` or `[[]]` can be used:
+```
+gap> [[0]]*[[]];
+[ [  ] ]
+```
+* <!-- .element: class="fragment" --> but `[]` and `[[]]` have no base domain
+* <!-- .element: class="fragment" --> `[]` is not a GAP collection $\leadsto$ causes troubles
+* <!-- .element: class="fragment" --> other solutions(?):
+  * `EmptyMatrix(chr)` (documented)
+  * `NullMapMatrix` (undocumented)
+</script>
+</section>
+
+<section>
+    <section data-transition="none">
+        <h4>Fun with empty matrices!</h4>
+        <pre><code data-trim>
+        gap> id:=IdentityMat(3);;
+        gap> m1:=[];;
+        gap> m2:=[[]];; 
+        gap> m3:=EmptyMatrix(0);
+        EmptyMatrix( 0 )
+        gap> m4:=[ EmptyRowVector(FamilyObj(42)) ];
+        [ &lt;empty row vector> ]
+        gap> m5:=IdentityMat(0);  # NullMapMatrix 
+        &lt;null map>
+        </code></pre>
+        <pre><code data-trim>
+        gap> TransposedMat(m1);
+        [  ]
+        gap> TransposedMat(m2);
+        [  ]
+        gap> TransposedMat(m3);
+        [  ]
+        gap> TransposedMat(m4);
+        [  ]
+        gap> TransposedMat(m5);
+        [  ]
+        </code></pre>
+    </section>
+
+    <section data-transition="none">
+        <h4>Fun with empty matrices!</h4>
+        <pre><code data-trim>
+        gap> id:=IdentityMat(3);;
+        gap> m1:=[];;
+        gap> m2:=[[]];; 
+        gap> m3:=EmptyMatrix(0);
+        EmptyMatrix( 0 )
+        gap> m4:=[ EmptyRowVector(FamilyObj(42)) ];
+        [ &lt;empty row vector> ]
+        gap> m5:=IdentityMat(0);  # NullMapMatrix 
+        &lt;null map>
+        </code></pre>
+        <pre><code data-trim>
+        gap> DimensionsMat(m1);
+        Error, no method found!
+        gap> DimensionsMat(m2);
+        Error, no method found!
+        gap> DimensionsMat(m3);
+        [ 0, 0 ]
+        gap> DimensionsMat(m4);
+        [ 1, 0 ]
+        gap> DimensionsMat(m5);
+        Error, no method found!
+        </code></pre>
+    </section>
+
+
+    <section data-transition="none">
+        <h4>Fun with empty matrices!</h4>
+        <pre><code data-trim>
+        gap> id:=IdentityMat(3);;
+        gap> m1:=[];;
+        gap> m2:=[[]];; 
+        gap> m3:=EmptyMatrix(0);
+        EmptyMatrix( 0 )
+        gap> m4:=[ EmptyRowVector(FamilyObj(42)) ];
+        [ &lt;empty row vector> ]
+        gap> m5:=IdentityMat(0);  # NullMapMatrix 
+        &lt;null map>
+        </code></pre>
+
+        <pre><code data-trim>
+        gap> id*m1;
+        Error, Inner product multiplication of lists: no summands
+        gap> id*m2;
+        [ [  ], [  ], [  ] ]
+        gap> id*m3;
+        EmptyMatrix( 0 )
+        gap> id*m4;
+        [ &lt;empty row vector>, &lt;empty row vector>, &lt;empty row vector> ]
+        gap> id*m5;
+        [ [  ], [  ], [  ] ]
+        </code></pre>
+    </section>
+
+
+    <section data-transition="none">
+        <h4>Fun with empty matrices!</h4>
+        <pre><code data-trim>
+        gap> id:=IdentityMat(3);;
+        gap> m1:=[];;
+        gap> m2:=[[]];; 
+        gap> m3:=EmptyMatrix(0);
+        EmptyMatrix( 0 )
+        gap> m4:=[ EmptyRowVector(FamilyObj(42)) ];
+        [ &lt;empty row vector> ]
+        gap> m5:=IdentityMat(0);  # NullMapMatrix 
+        &lt;null map>
+        </code></pre>
+
+        <pre><code data-trim>
+        gap> m1*id;
+        Error, Inner product multiplication of lists: no summands
+        gap> m2*id;
+        Error, Inner product multiplication of lists: no summands
+        gap> m3*id;
+        EmptyMatrix( 0 )
+        gap> m4*id;
+        Error, no method found!
+        gap> m5*id;
+        &lt;null map>
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <h3>Method dispatch overhead</h3>
+    <ul>
+    <li>Quiz: why are there both <code>First</code> and <code>FirstOp</code>?
+    </ul>
+    <pre class="fragment"><code data-trim>
+    gap> list := List([1..1000], i -> i^2);;
+    gap> for i in [1..10^4] do First(list,ReturnFalse); od; time;
+    205
+    gap> for i in [1..10^4] do FirstOp(list,ReturnFalse); od; time;
+    209
+    </code></pre>
+
+    <pre class="fragment"><code data-trim>
+    gap> list := List([1..1000], i -> [i^2]);;
+    gap> for i in [1..10^4] do First(list,ReturnFalse); od; time;
+    208
+    gap> for i in [1..10^4] do FirstOp(list,ReturnFalse); od; time;
+    499
+    </code></pre>
+
+    <pre class="fragment"><code data-trim>
+    gap> list := List([1..1000], i -> [[i^2]]);;
+    gap> for i in [1..10^4] do First(list,ReturnFalse); od; time;
+    201
+    gap> for i in [1..10^4] do FirstOp(list,ReturnFalse); od; time;
+    1227
+    </code></pre>
+</section>
+
+<section>
+    <h3>More on dispatch overhead</h3>
+    <pre class="fragment" style="margin-bottom:2px; margin-top:0px"><code data-trim>
+    gap> list := List([1..1000], i -> [[i^2]]);;
+    gap> TNUM_OBJ(list);
+    [ 22, "list (plain)" ]
+    </code></pre>
+    <pre class="fragment" style="margin-bottom:2px; margin-top:0px"><code data-trim>
+    gap> KnownTruePropertiesOfObject(list);
+    [ "IsFinite", "IsSmallList", "IsRectangularTable" ]
+    </code></pre>
+    <pre class="fragment" style="margin-bottom:2px; margin-top:0px"><code data-trim>
+    gap> TNUM_OBJ(list);
+    [ 26, "list (plain,dense)" ]
+    </code></pre>
+    <pre class="fragment" style="margin-bottom:2px; margin-top:0px"><code data-trim>
+    gap> MakeImmutable(list);;
+    gap> TNUM_OBJ(list);
+    [ 27, "list (plain,dense,imm)" ]
+    </code></pre>
+    <pre class="fragment" style="margin-bottom:2px; margin-top:0px"><code data-trim>
+    gap> KnownTruePropertiesOfObject(list);
+    [ "IsFinite", "IsSmallList", "IsRectangularTable" ]
+    gap> TNUM_OBJ(list);
+    [ 49, "list (plain,rect table,imm)" ]
+    </code></pre>
+
+    <pre class="fragment" style="margin-bottom:2px; margin-top:0px"><code data-trim>
+    gap> for i in [1..10^4] do First(list,ReturnFalse); od; time;
+    210
+    gap> for i in [1..10^4] do FirstOp(list,ReturnFalse); od; time;
+    202
+    </code></pre>
+</section>
+
+<section>
+<h3>List-of-rows is too restrictive</h3>
+<p>There are many ways to store a matrix, e.g.</p>
+<ul>
+<li class="fragment"> as a list of row vectors;
+<li class="fragment"> as a list of column vectors;
+<li class="fragment"> as a flat list with $rows \times columns$ entries;
+<li class="fragment"> as a "sparse" matrix; e.g.
+  <ul>
+  <li class="fragment"> a list of tuples $[i,j,a_{ij}]$ for non-zero entries
+<!-- 
+  <li class="fragment"> a list of diagonal entries of a diagonal matrix;
+  <li class="fragment"> a permutation, for a permutation matrix;
+ -->
+  </ul>
+<li class="fragment"> as a lazily computed matrix
+<li class="fragment"> ...
+</ul>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### List-of-rows is too restrictive 2
+
+* <!-- .element: class="fragment" --> historically, access matrix entries via `mat[i][j]`
+* <!-- .element: class="fragment" --> first gets "row" `mat[i]`, then extract `j`-th entry
+* <!-- .element: class="fragment" --> if `mat` isn't a list-of-rows, no "row object" exists!
+* <!-- .element: class="fragment" --> implementors need to spend a lot of effort to e.g. support `mat[i][j]:=x`, say
+  * <!-- .element: class="fragment" --> `mat[i]` returns a "proxy object" which reference `mat` and stores `i`
+  * <!-- .element: class="fragment" --> access to entries of proxy object maps to corresponding matrix entries
+</script>
+</section>
+
+</section>
+
+<section>
+<h1>Solution:</h1>
+<h2>A dedicated matrix (and vector) interface</h2>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+### `IsMatrixObj` and `IsVectorObj`
+<!-- 
+```
+DeclareCategory("IsMatrixObj",
+    IsVector and IsScalar and IsCopyable);
+```
+ -->
+* <!-- .element: class="fragment" --> goal: allow efficient linear algebra code, independent of actual representation
+* <!-- .element: class="fragment" --> define minimal common operations all `IsMatrixObj` implementations must provide:
+  1. <!-- .element: class="fragment" --> `BaseDomain` ("domain" is meant to be generic, not in math or GAP sense)
+  2. <!-- .element: class="fragment" --> `NumberRows` and `NumberColumns`
+  3. <!-- .element: class="fragment" --> `x:=mat[i,j];`
+  4. <!-- .element: class="fragment" --> `mat[i,j]:=x;`
+  4. <!-- .element: class="fragment" --> a few more; refer to <a href="https://docs.gap-system.org/doc/ref/chap26_mj.html#X7BEE647484978886">the documentation</a>
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### Extended functionality
+* <!-- .element: class="fragment" --> essential operations: `BaseDomain`, `NrRows`, `NrCols`, `x:=mat[i,j]`, `mat[i,j]:=x`
+* <!-- .element: class="fragment" --> "Generic" building blocks with default implementations, e.g.
+  * `SwapMatrixRows`, `AddMatrixRows`, ... (for linear algebra algorithms; since GAP 4.12)
+  * addition, multiplication, inversion, ...
+  * transpose, determinant, rank ...
+* <!-- .element: class="fragment" --> can provide custom method for e.g. multiplication for performance
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### Compressed matrix example
+```
+gap> mat:=RandomMat(3,5,GF(2));; ConvertToMatrixRep(mat);; mat;
+<a 3x5 matrix over GF2>
+gap> BaseDomain(mat);
+GF(2)
+gap> NrRows(mat); NrCols(mat);
+3
+5
+gap> mat[1,2];
+0*Z(2)
+gap> mat[1,5];
+Z(2)^0
+```
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### Constructors
+* <!-- .element: class="fragment" --> zero (and similar for `IdentityMatrix`)
+  * `ZeroMatrix([filter,]baseDom,m,n);`
+  * `ZeroMatrix(m,n,exampleMat);`
+* <!-- .element: class="fragment" --> generic (also conversion)
+  * `Matrix([[filter,] baseDom,] existingMatrix)`
+  * `Matrix([[filter,] baseDom,] nrRows, entriesList)`
+  * `Matrix(inputMat, exampleMat)` returns matrix of same type as `exampleMat`
+</script>
+</section>
+
+
+
+<section data-markdown>
+<script type="text/template">
+### Vectors
+* <!-- .element: class="fragment" --> there is also `IsVectorObj`
+```
+DeclareCategory( "IsVectorObj", IsVector and IsCopyable );
+```
+* <!-- .element: class="fragment" --> also can come in different representations (plain, compressed, sparse, ...)
+* <!-- .element: class="fragment" --> don't distinguish row and column vectors (if needed, can use $1\times n$ resp. $m\times 1$ matrices)
+* <!-- .element: class="fragment" --> `CompatibleVector(M)` return a vector of length `NrRows(M)`
+</script>
+</section>
+
+
+
+<section data-markdown>
+<script type="text/template">
+### Row list matrices
+
+* <!-- .element: class="fragment" --> Some code relies heavily on matrices being "lists of row vector"
+* <!-- .element: class="fragment" --> To accomodate that, there is also this:
+```
+DeclareCategory( "IsRowListMatrix", IsMatrixObj );
+```
+* <!-- .element: class="fragment" --> in that case, writing e.g. `mat[i]` to access `i`-th row is allowed and efficient
+
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### `MatrixObj` this week
+1. <!-- .element: class="fragment" --> Improve specification
+<!-- TODO: provide a link to https://docs.gap-system.org/doc/ref/chap26_mj.html -->
+1. <!-- .element: class="fragment" --> provide several  implementations, e.g.
+  * thin wrapper around flat lists (see PR [#5121](https://github.com/gap-system/gap/pull/5121))
+  * sparse matrix, or ...
+1. <!-- .element: class="fragment" --> create test suite for MatrixObj implementations
+1. <!-- .element: class="fragment" --> adapt library code to work with `IsMatrixObj` (e.g. try to create groups, see what breaks, fix it)
+1. <!-- .element: class="fragment" --> proof read the spec, try to use it, report problems
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+# Thank you!
+</script>
+</section>
+
+
+<section data-markdown>
+<script type="text/template">
+### Long term plan
+- improve the documentation / specification  further
+- add more basic operations that can be used widely to implement things 
+  efficiently for many implementations
+  (e.g. as recently done with `SwapMatrixRows`, `AddMatrixRows`, ...)
+- adapt GAP library to work well with new MatrixObj types
+- adapt packages to work with MatrixObj types
+- resolve many [open issues](https://github.com/gap-system/gap/issues?q=is%3Aopen%20is%3Aissue%20project%3Agap-system%2Fgap%2F1)
+  and [pull requests](https://github.com/gap-system/gap/pulls?q=is%3Aopen%20is%3Apr%20project%3Agap-system%2Fgap%2F1)
+</script>
+</section>
+
+
+<!-- 
+
+<section data-markdown>
+<script type="text/template">
+### Status so far:
+* already used in a few places:
+  * compressed matrices over small fields
+  * cmat types from `cvec` package
+  * used by: `fining`, `homalg`, `semigroups`
+* however, still a lot of work needed:
+  * revamp the API: decide which operations should be allowed
+  * provide default implementations for all
+  * write documentation
+  * adapt library and packages to use them
+</script>
+</section>
+
+ -->
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: "c/t",
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad();
+
+// HACK: custom gap log highlighting            
+hljs.registerLanguage("gaplog",function(a){return{c:[{cN:"meta",b:/^gap>/,r:10,starts:{cN:'title',e:/^(?!>)/}}]}});
+
+            } },
+//             { src: 'plugin/zoom-js/zoom.js', async: true },
+//             { src: 'plugin/notes/notes.js', async: true },
+
+            // MathJax
+            { src: 'plugin/math/math.js', async: true },
+        ]
+    });
+
+// hljs.listLanguages()
+// 
+// 
+// hljs.registerLanguage("gaplog2",function(hljs) {
+//   return {
+//     contains: [
+//       {
+//         className: 'meta',
+//         begin: /^gap>/,
+//         relevance: 10,
+//         starts: {
+//           // end the highlighting if we are on a new line and the line does not start
+//           // with a '>'
+//           end: /^(?!>)/,
+//           //subLanguage: 'julia'
+//       },
+//       }
+//     ]
+//   }
+// })
+
+
+</script>
+
+</body>
+</html>
