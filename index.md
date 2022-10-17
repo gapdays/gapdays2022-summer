@@ -23,7 +23,7 @@ week, we would be happy to hear about any progress you made.
 
 Please visit [gapdays.de](https://www.gapdays.de) for a list of all GAP Days.
 
-HackMD for the site.title [HackMD](https://hackmd.io/Zx09dY1UQMyOmUfrpPk9dg)
+HackMD for the {{ site.title }} [HackMD](https://hackmd.io/Zx09dY1UQMyOmUfrpPk9dg)
 
 ## {{ site.title }}
 
