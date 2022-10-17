@@ -21,9 +21,9 @@ This schedule is preliminary. Additional events will be added soon.
   - 11:00 - 11:30: Talk by Leonard Soicher:
     *[Clique and design finding in parallel using GAP, GRAPE, DESIGN and C]({{ site.baseurl }}/abstracts/soicher)*
   - 12:00: Lunch break
-  - 13:30 - 14:00: Talk by Max Horn:
+  - 14:15 - 14:45: Talk by Max Horn:
     [*Introduction to MatrixObj*](../slides/slides-Horn-MatrixObj.html)
-  - 14:30 - 16:30: Work session
+  - 14:45 - 16:30: Work session
   - 16:30: Stand-up meeting
   - 20:00: Get-together at [Guinness House](https://goo.gl/maps/yvbnJrCKLyZNw1k37)
   
