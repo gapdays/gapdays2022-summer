@@ -19,7 +19,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 10:00: **Opening of the GAP Days**
   - 10:20 - 10:50: Setup Session
   - 11:00 - 11:30: Talk by Leonard Soicher:
-    *[Clique and design finding in parallel using GAP, GRAPE, DESIGN and C]({{ site.baseurl }}/abstracts/soicher)* [slides]((../slides/gapdays_summer2022.pdf))
+    *[Clique and design finding in parallel using GAP, GRAPE, DESIGN and C]({{ site.baseurl }}/abstracts/soicher)* [slides](({{ site.baseurl }}/slides//gapdays_summer2022.pdf))
   - 12:00: Lunch break
   - 14:15 - 14:45: Talk by Max Horn:
     [*Introduction to MatrixObj*](../slides/slides-Horn-MatrixObj.html)
