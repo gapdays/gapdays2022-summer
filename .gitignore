@@ -14,3 +14,4 @@ _site
 *.synctex.gz(busy)
 *.thm
 *.toc
+.DS_Store
