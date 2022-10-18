@@ -26,15 +26,6 @@ This schedule is preliminary. Additional events will be added soon.
   - 14:45 - 16:30: Work session
   - 16:30: Stand-up meeting
   - 20:00: Get-together at [Guinness House](https://goo.gl/maps/yvbnJrCKLyZNw1k37)
-  
-  <!-- 10:00: **Opening of the GAP Days**
-  - 10:20 - 10:50: Talk by TBA:
-    *Introduction to MatrixObj*
-  - 11:00 - 11:30: Talk by Leonard Soicher:
-    *[Clique and design finding in parallel using GAP, GRAPE, DESIGN and C]({{ site.baseurl }}/abstracts/soicher)*
-  - 12:00: Lunch break
-  - 13:00 - 16:30: Work session
-  - 16:30: Stand-up meeting -->
 
 - **Tuesday** 
   - 09:00 - 9:15: Stand-up meeting
@@ -50,8 +41,7 @@ This schedule is preliminary. Additional events will be added soon.
     - 13:30 - 13:45: [Simplicial Surfaces](https://github.com/gap-packages/simplicial-surfaces) by Tom Görtzen, Reymond Akpanya and Meike Weiß
     - 13:55 - 14:10: [WPE](https://github.com/FriedrichRober/WPE) by Friedrich Rober
     - 14:20 - 14:35: [BruhatDecomposition](https://github.com/danielrademacher/BruhatDecomposition2) by Daniel Rademacher
-    <!-- - 14:45 - 15:00: ASR by Anna Sucker and Lucas Wollenhaupt -->
-  - 15:00 - 16:30: Work session
+  - 14:45 - 16:30: Work session
   - 16:30: Stand-up meeting
 
 - **Wednesday** 
