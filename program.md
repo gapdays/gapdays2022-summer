@@ -28,8 +28,8 @@ This schedule is preliminary. Additional events will be added soon.
   - 20:00: Get-together at [Guinness House](https://goo.gl/maps/yvbnJrCKLyZNw1k37)
 
 - **Tuesday** 
-  - 09:00 - 9:15: Stand-up meeting
-  - 09:20: Package Session Part 1
+  - 9:00 - 9:15: Stand-up meeting
+  - 9:20: Package Session Part 1
     - 9:20 - 9:35: [vole](https://github.com/peal/vole) by Christopher Jefferson
     - 9:45 - 10:00: [StandardFF](https://github.com/frankluebeck/StandardFF) by Frank Lübeck
     - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober
@@ -45,7 +45,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 16:30: Stand-up meeting
 
 - **Wednesday** 
-  - 09:00 - 9:15: Stand-up meeting
+  - 9:00 - 9:15: Stand-up meeting
   - 9:20 - 9:50: Talk by Mun See Chang:
     *[Computing Normalisers]({{ site.baseurl }}/abstracts/chang)*
   - 10:00 - 10:30: Talk by Ruth Hoffmann:
@@ -57,7 +57,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 19:00: Dinner at [Magellan](https://goo.gl/maps/tBAXAGMgrhspUEf8A)
 
 - **Thursday** 
-  - 09:00 - 9:15: Stand-up meeting
+  - 9:00 - 9:15: Stand-up meeting
   - 9:20 - 9:50: Talk by Fatemeh Koorepazan-Moftakhar
     *An algorithm for constructing all supercharacter theories of a finite group*
   - 10:00 - 10:30: Talk by Iryna Raievska and Maryna Raievska:
@@ -68,7 +68,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 16:30: Stand-up meeting
 
 - **Friday** 
-  - 09:00 - 9:15: Stand-up meeting
+  - 9:00 - 9:15: Stand-up meeting
   - 9:15 - 11:40: Work session
   - 11:40 - 12:00: Time for Feedback
   - 12:00: Lunch 
