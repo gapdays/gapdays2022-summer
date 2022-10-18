@@ -129,9 +129,9 @@ participants:
     affiliation: Ambedkar University Delhi
 ---
 
-<a href="{{ site.baseurl }}/images/Group_Photo.jpg">
+<a href="{{ site.baseurl }}/images/Group_Photo.jpeg">
   <img alt="Group photo for GAP Days Summer 2022 in Aachen. Click for larger
-  version" src="{{ site.baseurl }}/images/Group_Photo.jpg" /></a>
+  version" src="{{ site.baseurl }}/images/Group_Photo.jpeg" /></a>
 
 <ol>{% assign participants = page.participants | sort: "name" %}
 {% for p in participants %}
