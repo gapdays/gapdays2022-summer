@@ -54,7 +54,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
-  - 19:00: Dinner at [Magellan](https://goo.gl/maps/tBAXAGMgrhspUEf8A)
+  - 19:00: Dinner at [Magellan](https://magellan-aachen.de) ([Google Maps](https://goo.gl/maps/tBAXAGMgrhspUEf8A))
 
 - **Thursday** 
   - 9:00 - 9:15: Stand-up meeting
