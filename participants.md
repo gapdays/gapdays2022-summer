@@ -85,11 +85,11 @@ participants:
   - name: Vinay Vilas Wagh
     affiliation: Indian Institute of Technology Guwahati
 
-  - name: Bardia Jahangiri
-    affiliation: University of Kashan
+  # - name: Bardia Jahangiri
+  #  affiliation: University of Kashan
 
-  - name: Mohammad Moein Yousefian Arani
-    affiliation: University of Kashan
+  # - name: Mohammad Moein Yousefian Arani
+  #  affiliation: University of Kashan
 
   - name: Meike Weiß
     affiliation: RWTH Aachen
