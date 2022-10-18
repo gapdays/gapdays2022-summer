@@ -58,11 +58,11 @@ This schedule is preliminary. Additional events will be added soon.
 
 - **Thursday** 
   - 9:00 - 9:15: Stand-up meeting
-  - 9:20 - 9:50: Talk by Fatemeh Koorepazan-Moftakhar
+  - 9:20 - 9:35: Talk by Fatemeh Koorepazan-Moftakhar
     *An algorithm for constructing all supercharacter theories of a finite group*
-  - 10:00 - 10:30: Talk by Iryna Raievska and Maryna Raievska:
+  - 9:45 - 10:15: Talk by Iryna Raievska and Maryna Raievska:
     *[Finite local nearrings and their classification]({{ site.baseurl }}/abstracts/raievska)*
-  - 10:40 - 12:00: Work session
+  - 10:15 - 12:00: Work session
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
   - 16:30: Stand-up meeting
