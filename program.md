@@ -32,14 +32,14 @@ This schedule is preliminary. Additional events will be added soon.
   - 9:20: Package Session Part 1
     - 9:20 - 9:35: [vole](https://github.com/peal/vole) by Christopher Jefferson
     - 9:45 - 10:00: [StandardFF](https://github.com/frankluebeck/StandardFF) by Frank Lübeck
-    - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober
+    - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober Slides:  [slides]({{ site.baseurl }}/slides/LINS.pdf)    
     - 10:35 - 10:50: [SOTGrps](https://github.com/xpan-eileen/sotgrps) by Eileen Pan
   - 11:00 - 12:00: Work session
   - 12:00: Lunch break
   - 13:20: Group photo (please be there)
   - 13:30: Package Session Part 2
     - 13:30 - 13:50: [Simplicial Surfaces](https://github.com/gap-packages/simplicial-surfaces) by Tom Görtzen, Reymond Akpanya and Meike Weiß Slides:  [slides]({{ site.baseurl }}/slides/SimplicialSurfaces.pdf)
-    - 14:00 - 14:15: [WPE](https://github.com/FriedrichRober/WPE) by Friedrich Rober
+    - 14:00 - 14:15: [WPE](https://github.com/FriedrichRober/WPE) by Friedrich Rober Slides:  [slides]({{ site.baseurl }}/slides/WPE.pdf)
     - 14:25 - 14:40: [BruhatDecomposition](https://github.com/danielrademacher/BruhatDecomposition2) by Daniel Rademacher Slides:  [slides]({{ site.baseurl }}/slides/Daniel_Rademacher_BruhatDecomposition.pdf)
   - 14:50 - 16:30: Work session
   - 16:30: Stand-up meeting
