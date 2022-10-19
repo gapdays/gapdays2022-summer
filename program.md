@@ -40,7 +40,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 13:30: Package Session Part 2
     - 13:30 - 13:50: [Simplicial Surfaces](https://github.com/gap-packages/simplicial-surfaces) by Tom Görtzen, Reymond Akpanya and Meike Weiß
     - 14:00 - 14:15: [WPE](https://github.com/FriedrichRober/WPE) by Friedrich Rober
-    - 14:25 - 14:40: [BruhatDecomposition](https://github.com/danielrademacher/BruhatDecomposition2) by Daniel Rademacher
+    - 14:25 - 14:40: [BruhatDecomposition](https://github.com/danielrademacher/BruhatDecomposition2) by Daniel Rademacher Slides:  [slides]({{ site.baseurl }}/slides/Daniel_Rademacher_BruhatDecomposition.pdf)
   - 14:50 - 16:30: Work session
   - 16:30: Stand-up meeting
 
