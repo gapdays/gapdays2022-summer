@@ -19,10 +19,10 @@ This schedule is preliminary. Additional events will be added soon.
   - 10:00: **Opening of the GAP Days**
   - 10:20 - 10:50: Setup Session
   - 11:00 - 11:30: Talk by Leonard Soicher:
-    *[Clique and design finding in parallel using GAP, GRAPE, DESIGN and C]({{ site.baseurl }}/abstracts/soicher)* Slides:  [slides]({{ site.baseurl }}/slides/gapdays_summer2022.pdf)
+    *Clique and design finding in parallel using GAP, GRAPE, DESIGN and C* ([abstract]({{ site.baseurl }}/abstracts/soicher), [slides]({{ site.baseurl }}/slides/Soicher.pdf))
   - 12:00: Lunch break
   - 14:15 - 14:45: Talk by Max Horn:
-    [*Introduction to MatrixObj*](../slides/slides-Horn-MatrixObj.html)
+    *Introduction to MatrixObj* ([slides](../slides/slides-Horn-MatrixObj.html))
   - 14:45 - 16:30: Work session
   - 16:30: Stand-up meeting
   - 20:00: Get-together at [Guinness House](https://goo.gl/maps/yvbnJrCKLyZNw1k37)
@@ -32,24 +32,24 @@ This schedule is preliminary. Additional events will be added soon.
   - 9:20: Package Session Part 1
     - 9:20 - 9:35: [vole](https://github.com/peal/vole) by Christopher Jefferson
     - 9:45 - 10:00: [StandardFF](https://github.com/frankluebeck/StandardFF) by Frank Lübeck
-    - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober Slides:  [slides]({{ site.baseurl }}/slides/LINS.pdf)    
-    - 10:35 - 10:50: [SOTGrps](https://github.com/xpan-eileen/sotgrps) by Eileen Pan Slides:  [slides]({{ site.baseurl }}/slides/SOTGrps___GAP_Days.pdf)
+    - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober ([slides]({{ site.baseurl }}/slides/LINS.pdf))
+    - 10:35 - 10:50: [SOTGrps](https://github.com/xpan-eileen/sotgrps) by Eileen Pan ([slides]({{ site.baseurl }}/slides/SOTGrps.pdf))
   - 11:00 - 12:00: Work session
   - 12:00: Lunch break
   - 13:20: Group photo (please be there)
   - 13:30: Package Session Part 2
-    - 13:30 - 13:50: [Simplicial Surfaces](https://github.com/gap-packages/simplicial-surfaces) by Tom Görtzen, Reymond Akpanya and Meike Weiß Slides:  [slides]({{ site.baseurl }}/slides/SimplicialSurfaces.pdf)
-    - 14:00 - 14:15: [WPE](https://github.com/FriedrichRober/WPE) by Friedrich Rober Slides:  [slides]({{ site.baseurl }}/slides/WPE.pdf)
-    - 14:25 - 14:40: [BruhatDecomposition](https://github.com/danielrademacher/BruhatDecomposition2) by Daniel Rademacher Slides:  [slides]({{ site.baseurl }}/slides/Daniel_Rademacher_BruhatDecomposition.pdf)
+    - 13:30 - 13:50: [Simplicial Surfaces](https://github.com/gap-packages/simplicial-surfaces) by Tom Görtzen, Reymond Akpanya and Meike Weiß ([slides]({{ site.baseurl }}/slides/SimplicialSurfaces.pdf))
+    - 14:00 - 14:15: [WPE](https://github.com/FriedrichRober/WPE) by Friedrich Rober ([slides]({{ site.baseurl }}/slides/WPE.pdf))
+    - 14:25 - 14:40: [BruhatDecomposition](https://github.com/danielrademacher/BruhatDecomposition2) by Daniel Rademacher ([slides]({{ site.baseurl }}/slides/BruhatDecomposition.pdf))
   - 14:50 - 16:30: Work session
   - 16:30: Stand-up meeting
 
 - **Wednesday** 
   - 9:00 - 9:15: Stand-up meeting
   - 9:20 - 9:50: Talk by Mun See Chang:
-    *[Computing Normalisers]({{ site.baseurl }}/abstracts/chang)*
+    *Computing Normalisers* ([abstract]({{ site.baseurl }}/abstracts/chang))
   - 10:00 - 10:30: Talk by Ruth Hoffmann:
-    *[GAP for Permutation Pattern Classes]({{ site.baseurl }}/abstracts/hoffmann)*
+    *GAP for Permutation Pattern Classes* ([abstract](({{ site.baseurl }}/abstracts/hoffmann)))
   - 10:40 - 12:00: Work session
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
@@ -59,9 +59,9 @@ This schedule is preliminary. Additional events will be added soon.
 - **Thursday** 
   - 9:00 - 9:15: Stand-up meeting
   - 9:20 - 9:35: Talk by Fatemeh Koorepazan-Moftakhar
-    *An algorithm for constructing all supercharacter theories of a finite group* Slides:  [slides]({{ site.baseurl }}/slides/Koorepazan-Moftakhar.pdf)
+    *An algorithm for constructing all supercharacter theories of a finite group*  ([slides]({{ site.baseurl }}/slides/Koorepazan-Moftakhar.pdf))
   - 9:45 - 10:15: Talk by Iryna Raievska and Maryna Raievska:
-    *[Finite local nearrings and their classification]({{ site.baseurl }}/abstracts/raievska)*
+    *Finite local nearrings and their classification* ([abstract]({{ site.baseurl }}/abstracts/raievska))
   - 10:15 - 12:00: Work session
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
