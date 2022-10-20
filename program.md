@@ -61,7 +61,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 9:20 - 9:35: Talk by Fatemeh Koorepazan-Moftakhar
     *An algorithm for constructing all supercharacter theories of a finite group*  ([slides]({{ site.baseurl }}/slides/Koorepazan-Moftakhar.pdf))
   - 9:45 - 10:15: Talk by Iryna Raievska and Maryna Raievska:
-    *Finite local nearrings and their classification* ([abstract]({{ site.baseurl }}/abstracts/raievska))
+    *Finite local nearrings and their classification* ([abstract]({{ site.baseurl }}/abstracts/raievska)) ([slides]({{ site.baseurl }}/slides/Aachen_Raievski_2022.pdf))
   - 10:15 - 12:00: Work session
   - 12:00: Lunch 
   - 13:00 - 16:30: Work session
