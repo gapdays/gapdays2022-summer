@@ -59,7 +59,7 @@ This schedule is preliminary. Additional events will be added soon.
 - **Thursday** 
   - 9:00 - 9:15: Stand-up meeting
   - 9:20 - 9:35: Talk by Fatemeh Koorepazan-Moftakhar
-    *An algorithm for constructing all supercharacter theories of a finite group*
+    *An algorithm for constructing all supercharacter theories of a finite group* Slides:  [slides]({{ site.baseurl }}/slides/Koorepazan-Moftakhar.pdf)
   - 9:45 - 10:15: Talk by Iryna Raievska and Maryna Raievska:
     *[Finite local nearrings and their classification]({{ site.baseurl }}/abstracts/raievska)*
   - 10:15 - 12:00: Work session
