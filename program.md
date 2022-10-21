@@ -32,7 +32,7 @@ This schedule is preliminary. Additional events will be added soon.
   - 9:20: Package Session Part 1
     - 9:20 - 9:35: [vole](https://github.com/peal/vole) by Christopher Jefferson
     - 9:45 - 10:00: [StandardFF](https://github.com/frankluebeck/StandardFF) by Frank Lübeck
-    - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober ([slides]({{ site.baseurl }}/slides/LINS.pdf))
+    - 10:10 - 10:25: [LINS](https://github.com/FriedrichRober/LINS) by Friedrich Rober ([slides]({{ site.baseurl }}/slides/LINS.pdf) only open it with Adobe Acrobat Reader. Otherwise the animations dont work)
     - 10:35 - 10:50: [SOTGrps](https://github.com/xpan-eileen/sotgrps) by Eileen Pan ([slides]({{ site.baseurl }}/slides/SOTGrps.pdf))
   - 11:00 - 12:00: Work session
   - 12:00: Lunch break
