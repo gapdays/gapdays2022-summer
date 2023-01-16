@@ -125,6 +125,11 @@ participants:
     links:
       "GitHub: IrynaRaievska": https://github.com/IrynaRaievska
     
+  - name: Seyyed Ali Mohammadiyeh
+    affiliation: University of Kashan
+    links:
+      "GitHub: BaseMax": https://github.com/BaseMax
+    
   - name: Deepshikha Chatterjee
     affiliation: Ambedkar University Delhi
 ---
